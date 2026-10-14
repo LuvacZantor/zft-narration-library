@@ -2,7 +2,7 @@
   "id": "zft-narration-library",
   "title": "ZFT Narration Library",
   "description": "Shared editable Narrate journal compendium for ZFT Cinematics. Content-only storage module.",
-  "version": "0.1.0-dev.1",
+  "version": "0.1.0-dev.2",
   "authors": [
     {
       "name": "Zantor's Realms"
@@ -21,7 +21,8 @@
       "ownership": {
         "PLAYER": "NONE",
         "TRUSTED": "NONE",
-        "ASSISTANT": "NONE"
+        "ASSISTANT": "NONE",
+        "GAMEMASTER": "OWNER"
       }
     }
   ],

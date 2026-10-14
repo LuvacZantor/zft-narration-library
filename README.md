@@ -19,9 +19,9 @@ The `Data/assets/zft-narration-library/graphics/` folder is **not** supplied by 
 - Pack name: `narrations`
 - Document type: `JournalEntry` (no D&D5e system dependency)
 - Full collection ID: `zft-narration-library.narrations`
-- Starts empty. Foundry is expected to create the pack data directory on load; this requires a **live V13 check**.
-- The package does not itself provide Save, Load, Wipe, Delete Selected, or image uploads. Those are planned for **ZFT Cinematics**, not this module.
-- GM can unlock the pack when editing; do not give player roles edit access.
+- Starts empty. Foundry V13 has registered the pack and confirmed it visible to a GM in a live test.
+- The library package provides no UI or scripts. **ZFT Cinematics** handles Save, Load, image uploads, and future library maintenance features.
+- The compendium ownership explicitly grants **GAMEMASTER: OWNER** and denies PLAYER, TRUSTED, and ASSISTANT. A GM can unlock the pack when editing.
 
 ## Local install and smoke test
 
@@ -51,4 +51,10 @@ The GitHub repository tracks module definitions and whatever *deliberate* snapsh
 
 ## Development status
 
-Version `0.1.0-dev.1` is a **structural test build**, not a verified Foundry V13/V14 release. ZFT Cinematics has not been changed to use it yet.
+Version `0.1.0-dev.2` fixes GM visibility: Foundry V13 testing confirmed `visible: true` and GM access after setting `GAMEMASTER: OWNER`. ZFT Cinematics `0.2.0-dev.8` provides the first Save/Load integration. V14 is not yet verified.
+
+## v0.1.0-dev.2: GM compendium visibility fix
+
+Foundry V13 previously reported `visible: false` and `permissionLevel: 0` for the GM because the pack omitted the `GAMEMASTER` ownership entry. The manifest now sets `GAMEMASTER: OWNER`, preserving `NONE` for other roles. The user confirmed the pack is now visible in Foundry V13.
+
+For a local update, shut down Foundry, back up `Data/modules/zft-narration-library/packs/` if it contains saved entries, then extract the new library ZIP **over** the module directory without deleting its existing packs database. Restart Foundry after changing `module.json`. Never delete the pack data as part of a normal version update.
