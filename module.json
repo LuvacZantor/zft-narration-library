@@ -1,0 +1,37 @@
+{
+  "id": "zft-narration-library",
+  "title": "ZFT Narration Library",
+  "description": "Shared editable Narrate journal compendium for ZFT Cinematics. Content-only storage module.",
+  "version": "0.1.0-dev.1",
+  "authors": [
+    {
+      "name": "Zantor's Realms"
+    }
+  ],
+  "url": "https://github.com/LuvacZantor/zft-narration-library",
+  "compatibility": {
+    "minimum": "13"
+  },
+  "packs": [
+    {
+      "name": "narrations",
+      "label": "ZFT Narrations",
+      "type": "JournalEntry",
+      "path": "./packs/narrations",
+      "ownership": {
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
+        "ASSISTANT": "NONE"
+      }
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "ZFT Narration Library",
+      "sorting": "a",
+      "packs": [
+        "narrations"
+      ]
+    }
+  ]
+}
