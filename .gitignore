@@ -1,0 +1,10 @@
+# The installed narration library is a mutable user-content store.
+# Do not commit compendium data or uploaded graphics/audio to this repository.
+packs/**
+!packs/.gitkeep
+assets/graphics/**
+!assets/graphics/.gitkeep
+assets/audio/**
+!assets/audio/.gitkeep
+.DS_Store
+Thumbs.db
