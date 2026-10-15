@@ -10,7 +10,8 @@
   ],
   "url": "https://github.com/LuvacZantor/zft-narration-library",
   "compatibility": {
-    "minimum": "13"
+    "minimum": "13",
+    "verified": "13"
   },
   "packs": [
     {
